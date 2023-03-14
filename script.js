@@ -26,7 +26,7 @@ function button(tagName, attrName, attrValue, content) {
     return button;
 }
 
-function foo(){
+function foo() {
     var firstName = document.getElementById("firstName").value;
     console.log(firstName);
 
