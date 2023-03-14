@@ -19,6 +19,30 @@ function lineBreak(tagName) {
     return br;
 }
 
+function button(tagName, attrName, attrValue, content) {
+    var button = document.createElement(tagName);
+    button.setAttribute(attrName, attrValue);
+    button.innerHTML = content;
+    return button;
+}
+
+function foo(){
+    var firstName = document.getElementById("firstName").value;
+    console.log(firstName);
+
+    var middleName = document.getElementById("middleName").value;
+    console.log(middleName);
+
+    var lastName = document.getElementById("lastName").value;
+    console.log(lastName);
+
+    var email = document.getElementById("email").value;
+    console.log(email);
+
+    var password = document.getElementById("password").value;
+    console.log(password);
+}
+
 var firstName = labels("label", "for", "firstName", "First Name");
 var br = lineBreak("br");
 var input1 = inputs("input", "type", "text", "name", "First Name", "id", "firstName", "placeholder", "Enter your First Name");
@@ -43,5 +67,8 @@ var password = labels("label", "for", "password", "Password");
 var br8 = lineBreak("br");
 var input5 = inputs("input", "type", "text", "name", "Password", "id", "password", "placeholder", "Enter your Password");
 var br9 = lineBreak("br");
+var br10 = lineBreak("br");
 
-document.body.append(firstName, br, input1, br1, middleName, br2, input2, br3, lastName, br4, input3, br5, email, br6, input4, br7, password, br8, input5, br9);
+var button1 = button("button", "onclick", "foo()", "Click Me");
+
+document.body.append(firstName, br, input1, br1, middleName, br2, input2, br3, lastName, br4, input3, br5, email, br6, input4, br7, password, br8, input5, br9, br10, button1);
